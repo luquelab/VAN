@@ -1,23 +1,26 @@
-## Author:
-#    Diana Y. Lee, Luque Lab, SDSU
-#    dlee@sdsu.edu
-#
-# Purpose:
-#    This the current (as of 2021-11-10) G2T model for predicting the capsid architecture (as measured by the 
-#    T-number) of a tailed phage from the genome
-#
-# Input: 
-#    This code requires genome length that can be entered in one of three ways:
-#    1) a single genome length
-#    2) a fasta file containing up to 5000 items
-#    3) a csv file containing at least two columns: "Virus_ID" and "genome_length" 
-#      
-# Output:
-#    
-#    Single genome option results will display on screen. 
-#    All others will be provided in the file G2TResults.csv    
-#
-##### 
+# -*- coding: utf-8 -*-
+""" Author:
+   Diana Y. Lee, Luque Lab, SDSU
+   dlee@sdsu.edu
+   
+ Purpose:
+    This the current (as of 2021-11-10) G2T model for predicting the capsid architecture (as measured by the 
+    T-number) of a tailed phage from the genome
+
+ Requires: 
+    phageFunctions.py  :  Functions for calculating T based on genome size
+
+ Input: 
+    This code requires genome length that can be entered in one of three ways:
+    1) a single genome length
+    2) a fasta file containing up to 5000 items
+    3) a csv file containing at least two columns: "Virus_ID" and "genome_length" 
+      
+ Output:
+    
+    Single genome option results will display on screen. 
+    All others will be provided in the file G2TResults.csv    """
+
 
 
 # imports
@@ -28,16 +31,13 @@ import os
 
 from Bio import SeqIO
 
-from ipynb.fs.full.phage_functions import tNum
-from ipynb.fs.full.phage_functions import tDictAll
+from phageFunctions import tNum
 
-# create T dictionaries
-tdict2,tdict2rev = tDictAll(7)
 # set the error margin
 errMar = 0.09
 
-genome_Type = input("Get in the VAN! Enter input type (0: genome(bp), 1: fasta file, 2: csv file: ")
-if genome_Type=="0":
+genome_Type = input("Get in the VAN! Enter input type (1: genome(bp), 2: fasta file, 3: csv file): ")
+if genome_Type=="1":
     test_genome = float(input("Enter genome length in bp: "))
 
     T_raw_test = round(tNum(test_genome/1000,0),4)
@@ -49,8 +49,8 @@ if genome_Type=="0":
     print("Nearest T, no restriction: ", T_nearest_test)
     print("Nearest T within specified error margin (",errMar,"): ", T_errMar_test)
 
-elif genome_Type=="1":
-    print("neat. I can do that.")
+elif genome_Type=="2":
+    print("Vroom! Let's go!")
     genome_Fasta_Loc = input("Enter file location: ")
     
     assert os.path.exists(genome_Fasta_Loc), "Error: file does not exist at "+str(genome_Fasta_Loc)
@@ -97,7 +97,7 @@ elif genome_Type=="1":
     phageG2TResult.to_csv(r'G2TResults.csv', index=False)    #stuff you do with the file goes here
     print("Success! see G2TResults.csv")
 
-elif genome_Type=="2":
+elif genome_Type=="3":
     print("I can do that. Your .csv file will require two columns: Virus ID and genome_length")
     genome_data_Loc = input("Enter file location: ")
     
@@ -135,4 +135,4 @@ elif genome_Type=="2":
     print("Success! see G2TResults.csv")
 
 else:
-    print("Beep beep. Invalid option.")
+    print("Sad honk. Invalid option.")

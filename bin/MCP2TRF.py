@@ -30,44 +30,13 @@ Output:
 # basic imports
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 np.random.seed(42)
-import csv
 import os
 import copy
 
-# ML imports
-from sklearn.metrics import mean_squared_error
-from sklearn import metrics
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import cross_val_predict
-from sklearn.base import BaseEstimator
-from sklearn.metrics import precision_score, recall_score, f1_score
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import roc_curve
-from sklearn.metrics import roc_auc_score
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import mean_squared_error
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import cross_val_score, GridSearchCV
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.model_selection import cross_val_score
-from sklearn import metrics
-
 # biopython imports
 from Bio import SeqIO
-from Bio.Seq import Seq
-from Bio.SeqUtils import GC
 from Bio.SeqUtils.IsoelectricPoint import IsoelectricPoint as IP
-
-# phage function imports
-from phageFunctions import tNearest
-from phageFunctions import tNearestValid
-from phageFunctions import tModel
-from phageFunctions import tNum
-from phageFunctions import tList
-from phageFunctions import tDictAll
 
 # custom function to count amino acids
 # amino acids are hardcoded to avoid broken dependencies, since they do not change

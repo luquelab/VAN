@@ -94,7 +94,7 @@ elif genome_Type=="2":
     
     # add T predictions to the phage data
     phageG2TResult = genome_fasta_data.merge(df_T, how='left', on='Virus_ID')
-    phageG2TResult.to_csv(r'G2TResults.csv', index=False)    #stuff you do with the file goes here
+    phageG2TResult.to_csv(r'G2TResults.csv', index=False)
     print("Success! see G2TResults.csv")
 
 elif genome_Type=="3":

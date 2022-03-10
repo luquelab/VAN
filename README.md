@@ -1,31 +1,18 @@
-# Luque Lab project template
+# WHAT, WHO, WHEN
 
-## WHAT
-This repository provides the default structure for projects in the Luque Lab.
+- Folder containing the files associated with the Luque Lab Virus Anatomy Navigator (VAN)
+Lee et al. Predicting the capsid architecture of tailed phages from metagenomic data https://doi.org/10.1016/j.csbj.2021.12.032
 
-## WHO
-The template was originally concived by Antoni Luque based on recommendations from Noble PLoS Comp Biol 2009, Wilson et al PLoS Comp Biol 2017, and Briney "Data Management for Researchers" (2015), Hunt and Thomas "The Pragmatic Programmer: Your Journey to Mastery" (2019 2nd ed).
+- Diana Y. Lee, Luque Lab, SDSU / dlee@sdsu.edu
+- 2021-09-24, revised 2022-18-01
 
-## WHEN
-This is an evolving repository
-Started: 2021-05-10
+# FOLDERS & FILES
 
-End: ...
+**FOLDER:** 0_jupyter_notebooks
+--> includes all jupyter notebooks, required data, and resulting files 
 
-## FILES & FOLDERS
-FOLDER: /bin
---> This folder contains basic scripts and executable files.
+**FOLDER:** 1_executables
+--> includes both G2T and MCP2T python executable files to run the tools on your data
 
-FOLDER: /data
---> This folder contains the raw data associated with the project and the potential references.
-
-FOLDER: /docs
---> This folder contains the manuscript, digital copies of the cited references, figures, and other associated files for publication.
-
-FOLDER: /results
---> This folder contains the results, performance analysis, and commented references associated with the project.
-
-FOLDER: /src
---> This folder contains source code files that require compilation.
-
-The syntax of markdown files (.md) is CommonMark unless specified otherwise (https://commonmark.org/help/)
+**FOLDER:** 2_github_docs
+--> (in progress)files for github pages

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """ Author:
    Diana Y. Lee, Luque Lab, SDSU
    dlee@sdsu.edu
@@ -96,7 +95,7 @@ elif genome_Type=="2":
     print("Success! see G2TResults.csv")
 
 elif genome_Type=="3":
-    print("I can do that. Your .csv file will require two columns: Virus ID and genome_length")
+    print("I can do that. Your .csv file will require two columns: Virus_ID and genome_length")
     genome_data_Loc = input("Enter file location: ")
     
     assert os.path.exists(genome_data_Loc), "Error: file does not exist at "+str(genome_Fasta_Loc)

@@ -21,6 +21,12 @@
     Single genome option results will display on screen.\ 
     All others will be provided in the file G2TResults.csv
 
+## TESTED ON
+--> Python 3
+
+## REQUIRES
+--> biopython v. 1.79
+
 ## TO INSTALL:
 --> save both the G2T.py and phageFunctions.py files locally.
 
@@ -47,6 +53,12 @@
         'MCP_Sequence'\
 --> Output: \
     MCP2TResults.csv  :  results of the random forest prediction
+    
+## TESTED ON
+--> Python 3
+
+## REQUIRES
+--> biopython v. 1.79
 
 ## TO INSTALL:
 --> save the MCP2TRF.py, phageFunctions.py, MCP2T_RF_state(new).db files locally.

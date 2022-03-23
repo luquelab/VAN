@@ -21,10 +21,10 @@
     Single genome option results will display on screen.\ 
     All others will be provided in the file G2TResults.csv
 
-## TESTED ON
+### TESTED ON
 --> Python 3
 
-## REQUIRES
+### REQUIRES
 --> biopython v. 1.79
 
 ## TO INSTALL:
@@ -54,10 +54,10 @@
 --> Output: \
     MCP2TResults.csv  :  results of the random forest prediction
     
-## TESTED ON
+### TESTED ON
 --> Python 3
 
-## REQUIRES
+### REQUIRES
 --> biopython v. 1.79
 
 ## TO INSTALL:
